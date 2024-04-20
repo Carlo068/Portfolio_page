@@ -7,26 +7,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 </head>
-<body>
-    <div class="grid grid-cols-1 xl:grid-cols-1 gap-4 px-4 py-4">
-        <div class="w-160 h-36 bg-gray-100 rounded-xl p-4">
-            <h1 class="text-4xl">My Portfolio</h1>
-            <h2 class="text-2xl">I'm a learning web developer</h2>
-            <img class="object-scale-down h-20" src="your-image-link.jpg" alt=""/>
+<body class="h-screen">
+    <header class="bg-gray-800">
+        <nav class="container mx-auto px-6 py-3">
+        <div class="flex items-center justify-between">
+            <div class="text-white font-bold text-xl">
+            <a href="#">Logo</a>
+            </div>
+            <div class="hidden md:block">
+            <ul class="flex items-center space-x-8">
+                <li><a href="#home" class="text-white">Home</a></li>
+                <li><a href="#about" class="text-white">About</a></li>
+                <li><a href="#projects" class="text-white">Projects</a></li>
+                <li><a href="#contact" class="text-white">Contact</a></li>
+            </ul>
+            </div>
+            <div class="md:hidden">
+            <button class="outline-none mobile-menu-button">
+                <svg class="w-6 h-6 text-white" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            </div>
         </div>
-        <div class="w-160 h-32 bg-gray-200 rounded-xl p-4">
-            <a href="movies.html"><h3 class="text-xl">Top Tier Movies OAT (animated edition)</h3></a>
-            <img class="object-scale-down h-20" src="https://i.pinimg.com/originals/4c/44/2a/4c442a367ecbc9dc4af02cc04f0cda2f.jpg" alt=""/>
+        <div class="mobile-menu hidden md:hidden">
+            <ul class="mt-4 space-y-4">
+            <li><a href="#" class="block px-4 py-2 text-white bg-gray-900 rounded">Home</a></li>
+            <li><a href="#" class="block px-4 py-2 text-white bg-gray-900 rounded">About</a></li>
+            <li><a href="#" class="block px-4 py-2 text-white bg-gray-900 rounded">Projects</a></li>
+            <li><a href="#" class="block px-4 py-2 text-white bg-gray-900 rounded">Contact</a></li>
+            </ul>
         </div>
-        <div class="w-160 h-32 bg-gray-200 rounded-xl p-4">
-            <a href="exercise.html"><h3 class="text-xl">Birthday invite</h3></a>
-            <img class="object-scale-down h-20" src="https://64.media.tumblr.com/5c54b4bd4c3c900a79cfda2af33a0549/tumblr_psif6o619u1wv0vrj_1280.jpg" alt=""/>
+        
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="p-20">
+            <div class="container mx-auto">
+                <div class="flex justify-center">
+                    <div class="flex flex-col gap-5 text-center">
+                        <img class="rounded-full bg-gray-50 h-52 w-56 mx-auto" src="https://i.pinimg.com/originals/4c/44/2a/4c442a367ecbc9dc4af02cc04f0cda2f.jpg" />
+                        <div class="flex flex-col gap-3">
+                            <h1 class="font-bold text-6xl">My Portfolio</h1>
+                            <p class="text-gray-500 text-sm">Web Developement Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section id="about" class="sm:p-10 lg:p-20 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="flex justify-center items-center">
+                <div class="m-auto">
+                    <div class="grid grid-cols-2 gap-4 px-4 py-4">
+                        <div class="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md text-lg"> <!-- Increased font size by 20% -->
+                            <h1 class="text-2xl font-semibold mb-4 text-center">Hi, I'm Carlo Alejandro Ruiz Olvera</h1>
+                            <p class="text-gray-700">I'm a Student of La Salle University. Here are a few things about me:</p>
+                            <ul class="list-disc mt-4 ml-6">
+                                <li>I love working to better myself.</li>
+                                <li>I'm currently learning web development tools.</li>
+                                <li>I'm currently working on my Portfolio project.</li>
+                                <li>You can connect with me on <a href="https://github.com/Carlo068" class="text-blue-500 hover:underline">Github</a>.</li>
+                            </ul>
+                        </div>
+                        <div class="flex justify-center items-center max-w-full mx-auto p-6 bg-gray-50 rounded-lg" > <!-- Centering the image and making it a square shape -->
+                            <img class="object-cover w-48 h-48" src="https://i.pinimg.com/originals/4c/44/2a/4c442a367ecbc9dc4af02cc04f0cda2f.jpg" alt=""/> <!-- Using object-cover to maintain aspect ratio and setting width and height to create a square shape -->
+                        </div>
+                    </div>
+                </div>
+            </div> 
         </div>
-        <div class="w-160 h-8 bg-blue-600 rounded-xl p-2 flex justify-around items-center">
-            <a href="aboutme.html" class="text-lg">About me</a>
-            <a href="contact.html" class="text-lg">Contact Me</a>
+    </section>
+    <section id="projects" class="sm:p-10 lg:p-20 bg-gray-20">
+        <div class="container mx-auto">
+            <div class="flex justify-center items-center">
+                <div class="m-auto">
+                    <div class="mx-auto px-5">
+                        <a href="/Portfolio_page/exercise.html" target="_blank" rel="noopener noreferrer">
+                            <div class="max-w-xs cursor-pointer rounded-lg bg-white p-2 shadow duration-150 hover:scale-105 hover:shadow-md">
+                                <img class="w-full rounded-lg object-cover object-center" src="https://th.bing.com/th/id/OIP.hPNpfZbps8Mu4Q_BfIwupQHaEK?rs=1&pid=ImgDetMain" alt="product" />
+                                <p class="my-4 pl-4 font-bold text-gray-500">Project 1</p>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="m-auto">
+                    <div class="mx-auto px-5">
+                        <a href="/Portfolio_page/movies.html" target="_blank" rel="noopener noreferrer">
+                            <div class="max-w-xs cursor-pointer rounded-lg bg-white p-2 shadow duration-150 hover:scale-105 hover:shadow-md">
+                                <img class="w-full rounded-lg object-cover object-center" src="https://th.bing.com/th/id/OIP.FrNP0mKRcoeSA244f63uzwAAAA?rs=1&pid=ImgDetMain" alt="product" />
+                                <p class="my-4 pl-4 font-bold text-gray-500">Project 2</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
+    </main>  
     </div>
+    <hr class="my-3 md:my-6 border-gray-400" />
+    <footer id="contact" class="mt-8 text-center text-gray-500">
+        <p> Contact me at: carlo.ruiz.scch@gmail.com</p>
+        <div class="mt-4">
+            <a href="https://www.facebook.com/carlo.ruiz.545402/" target="_blank" class="text-gray-500 hover:text-blue-500">Facebook</a>
+            <a href="https://www.instagram.com/carlo_ru_068/" target="_blank" class="ml-4 text-gray-500 hover:text-blue-500">Instagram</a>
+            <a href="https://www.linkedin.com/in/carlo-ruiz-64ab60302/" target="_blank" class="ml-4 text-gray-500 hover:text-blue-500">LinkedIn</a>
+        </div>
+    </footer>
 </body>
 
 </html>
